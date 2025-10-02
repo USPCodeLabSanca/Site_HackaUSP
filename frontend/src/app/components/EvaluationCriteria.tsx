@@ -1,35 +1,45 @@
 import React from 'react';
+// Importações dos ícones
+import { 
+  LuBrain, 
+  LuPencil, 
+  LuStore, 
+  LuLeaf, 
+  LuDollarSign, 
+  LuPresentation, 
+} from 'react-icons/lu';
 
 // Dados dos critérios
 const criteriaData = [
   { 
     title: "Inovação", 
     description: "A empresa é disruptiva e possui produto inovador?", 
-    icon: <div className="w-10 h-10 border-2 rounded-full border-highlight flex items-center justify-center text-xl">🧠</div> 
+    IconComponent: LuBrain 
   },
   { 
     title: "MVP", 
     description: "Seu mínimo produto viável conseguiu validar seu problema e ideia?", 
-    icon: <div className="w-10 h-10 border-2 rounded-full border-highlight flex items-center justify-center text-xl">✏️</div> 
+    IconComponent: LuPencil 
   },
+  { 
     title: "Product-market fit", 
     description: "O seu produto se encaixa no mercado e tem demanda?", 
-    icon: <div className="w-10 h-10 border-2 rounded-full border-highlight flex items-center justify-center text-xl">🏪</div> 
+    IconComponent: LuStore 
   },
   { 
     title: "Impacto socioambiental", 
     description: "Seu negócio melhora o mundo?", 
-    icon: <div className="w-10 h-10 border-2 rounded-full border-highlight flex items-center justify-center text-xl">🌳</div> 
+    IconComponent: LuLeaf 
   },
   { 
     title: "Modelo de negócios", 
     description: "O modelo proposto é viável financeiramente?", 
-    icon: <div className="w-10 h-10 border-2 rounded-full border-highlight flex items-center justify-center text-xl">💵</div> 
+    IconComponent: LuDollarSign 
   },
   { 
     title: "Pitch", 
     description: "Sua proposta foi bem vendida com uma marca forte e bons argumentos?", 
-    icon: <div className="w-10 h-10 border-2 rounded-full border-highlight flex items-center justify-center text-xl">🗣️</div> 
+    IconComponent: LuPresentation 
   },
 ];
 
@@ -51,7 +61,7 @@ const EvaluationCriteria: React.FC = () => {
           >
             {/* Ícone */}
             <div className="text-highlight mb-4">
-              {item.icon}
+              <item.IconComponent size={40} /> {/* Ajuste o size e strokeWidth */}
             </div>
             
             {/* Título */}
