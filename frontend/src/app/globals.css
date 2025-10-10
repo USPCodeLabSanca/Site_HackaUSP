@@ -9,6 +9,9 @@
   --color-light-gray: #DDE1E3;
   --color-medium-gray: #909598;
   --color-highlight: #179ADA;
+  --color-gold: #FFD700;
+  --color-silver: #C0C0C0;
+  --color-bronze: #CD7F32;
 }
 
 @theme {
@@ -18,6 +21,9 @@
   --color-light-gray: #DDE1E3;
   --color-medium-gray: #909598;
   --color-highlight: #179ADA;
+  --color-gold: #FFD700;
+  --color-silver: #C0C0C0;
+  --color-orange-prize: #F7931E;
 }
 
 @media (prefers-color-scheme: dark) {
