@@ -23,7 +23,7 @@ export const Header = () => {
           9ª edição do maior hackathon da USP
         </h2>
         <div className="mt-10 md:mt-20 lg:mt-30">
-          <Countdown targetDate="2025-11-07T00:00:00" />
+          <Countdown targetDate="2025-11-01T08:00:00" />
         </div>
       </div>
     </section>
