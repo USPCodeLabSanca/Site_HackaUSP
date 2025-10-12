@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaMedal } from 'react-icons/fa'
+import { FaMedal } from "react-icons/fa";
 
 // Interface para as propriedades
 interface MedalIconProps {
