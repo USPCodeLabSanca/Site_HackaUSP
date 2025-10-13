@@ -1,6 +1,7 @@
 import { Navbar } from './components/Navbar'
 import { Header } from './components/Header'
 import Image from "next/image";
+import About from "./components/About"
 import EvaluationCriteria from "./components/EvaluationCriteria";
 import PrizesSection from "./components/PrizesSection";
 import Maps from "./components/Maps";
@@ -11,6 +12,7 @@ export default function Home() {
     <div className="font-roboto min-h-screen">
       <Navbar />
       <Header />
+      <About />
       <EvaluationCriteria />
       <PrizesSection />
       <Maps />
