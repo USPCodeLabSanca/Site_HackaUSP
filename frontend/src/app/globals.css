@@ -1,29 +1,29 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --color-light-blue: #1687BF;
-  --color-dark-blue: #041E37;
-  --color-accent: #155B7E;
-  --color-light-gray: #DDE1E3;
+  --color-light-blue: #1687bf;
+  --color-dark-blue: #041e37;
+  --color-accent: #155b7e;
+  --color-light-gray: #dde1e3;
   --color-medium-gray: #909598;
-  --color-highlight: #179ADA;
-  --color-gold: #FFD700;
-  --color-silver: #C0C0C0;
-  --color-bronze: #CD7F32;
+  --color-highlight: #179ada;
+  --color-gold: #ffd700;
+  --color-silver: #c0c0c0;
+  --color-bronze: #cd7f32;
 }
 
 @theme {
-  --color-light-blue: #1687BF;
-  --color-dark-blue: #041E37;
-  --color-accent: #155B7E;
-  --color-light-gray: #DDE1E3;
+  --color-light-blue: #1687bf;
+  --color-dark-blue: #041e37;
+  --color-accent: #155b7e;
+  --color-light-gray: #dde1e3;
   --color-medium-gray: #909598;
-  --color-highlight: #179ADA;
-  --color-gold: #FFD700;
-  --color-silver: #C0C0C0;
-  --color-orange-prize: #F7931E;
+  --color-highlight: #179ada;
+  --color-gold: #ffd700;
+  --color-silver: #c0c0c0;
+  --color-orange-prize: #f7931e;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -33,12 +33,21 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background: var(--background);
+  background: var(--color-dark-blue);
   color: var(--foreground);
   font-family: var(--font-roboto);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-orbitron);
 }
