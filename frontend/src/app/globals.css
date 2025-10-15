@@ -12,6 +12,8 @@
   --color-gold: #ffd700;
   --color-silver: #c0c0c0;
   --color-bronze: #cd7f32;
+  --font-roboto: 'Roboto', sans-serif;
+  --font-orbitron: 'Orbitron', sans-serif;
 }
 
 @theme {
@@ -24,6 +26,8 @@
   --color-gold: #ffd700;
   --color-silver: #c0c0c0;
   --color-orange-prize: #f7931e;
+  --font-roboto: 'Roboto', sans-serif;
+  --font-orbitron: 'Orbitron', sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {

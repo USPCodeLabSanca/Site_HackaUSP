@@ -5,7 +5,7 @@ import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 
 // Coordenadas iniciais
-const position: L.LatLngExpression = [-23.55052, -46.633308]; // São Paulo
+const position: L.LatLngExpression = [-23.572637934713782, -46.69245796510123]; // São Paulo
 
 // Configuração do ícone do marcador
 // Esta é uma solução comum para problemas com ícones no Leaflet + React
@@ -23,7 +23,7 @@ function MapaLeaflet() {
   return (
     <MapContainer 
       center={position} 
-      zoom={13} 
+      zoom={14} 
       scrollWheelZoom={false} 
       style={{ height: '500px', width: '100%' }}
     >
@@ -37,7 +37,7 @@ function MapaLeaflet() {
           <div className="text-center">
             <strong>HackaUSP</strong><br />
             Centro de São Paulo<br />
-            Local do evento
+            Alice
           </div>
         </Popup>
       </Marker>

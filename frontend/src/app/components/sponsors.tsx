@@ -1,16 +1,86 @@
-/**
- * Componente de Patrocinadores
- * 
- * As logos atuais são placeholders (ícones de empresas).
- * O componente está preparado para a fácil substituição pelas logos oficiais quando estas forem confirmadas.
- * 
- * Para substituir as logos:
- * 1. Adicione as imagens à pasta /public/images/sponsors/
- * 2. Substitua os ícones pelos componentes Image do Next.js
- * 3. Mantenha as dimensões e estilos para consistência visual
- */
+import Image from 'next/image';
 
+interface Sponsor {
+  id: number;
+  name: string;
+  logoPath?: string;
+  link?: string;
+  width?: number;
+  height?: number;
+}
+
+const SPONSORS_DATA: Sponsor[] = [
+  {
+    id: 1,
+    name: "Irya",
+    logoPath: "/assets/patrocinadores/irya-logo.png", 
+    link: "https://www.iryasolutions.com.br/", 
+    width: 200, 
+    height: 80, 
+  },
+  {
+    id: 2,
+    name: "WEX",
+    logoPath: "/assets/patrocinadores/wex-logo.png",
+    link: "https://www.wexinc.com/", 
+    width: 200, 
+    height: 80, 
+  },
+  {
+    id: 3,
+    name: "Alice",
+    logoPath: "/assets/patrocinadores/alice-logo.png",
+    link: "https://alice.com.br/", 
+    width: 160, 
+    height: 60, 
+  }
+];
+
+
+// Componente de Patrocinadores
 export default function Sponsors() {
+  
+  // Função auxiliar para renderizar o Card do Patrocinador
+  const SponsorCard = ({ id, name, link, logoPath, width, height }: Sponsor) => {
+    const BaseTag = link ? 'a' : 'div';
+    
+    const linkProps = link ? { href: link, target: "_blank", rel: "noopener noreferrer" } : {};
+
+    return (
+      <BaseTag
+        key={id}
+        {...linkProps}
+        className="w-full md:w-64 lg:w-64 bg-[var(--color-highlight)] rounded-lg h-48 flex flex-col items-center justify-center hover:bg-[var(--color-light-blue)] transition-colors duration-300 cursor-pointer p-2"
+      >
+        {/* Área da Logo */}
+        <div className="relative w-full max-w-full flex justify-center items-center h-2/3">
+          {logoPath ? (
+            <Image
+              src={logoPath}
+              alt={name} 
+              width={width || 200}
+              height={height || 80}
+              className="object-contain max-h-full max-w-full p-2"
+            />
+          ) : (
+            // FALLBACK - Se o logoPath não for fornecido, mostra um placeholder
+            <div className="text-white text-4xl mb-2 text-center">
+              {name}
+              <div className="text-sm">(Logo Pendente)</div>
+            </div>
+          )}
+        </div>
+      </BaseTag>
+    );
+  };
+
+  const chunkSize = 3;
+  const sponsorGroups = [];
+  for (let i = 0; i < SPONSORS_DATA.length; i += chunkSize) {
+    sponsorGroups.push(SPONSORS_DATA.slice(i, i + chunkSize));
+  }
+
+
   return (
     <section className="w-full py-16 px-4 bg-[var(--color-dark-blue)]">
       <div className="max-w-6xl mx-auto">
@@ -24,53 +94,27 @@ export default function Sponsors() {
           </h3>
         </div>
 
-        {/* Grid de patrocinadores */}
+        {/* Grid de patrocinadores (Dinâmico) */}
         <div className="max-w-4xl mx-auto space-y-16">
-          {/* Primeira linha - 3 cards */}
-          <div className="flex flex-wrap justify-center gap-16">
-            <div className="w-full md:w-64 lg:w-64 bg-[var(--color-highlight)] rounded-lg h-48 flex flex-col items-center justify-center hover:bg-[var(--color-light-blue)] transition-colors duration-300 cursor-pointer p-6">
-              <div className="text-white text-6xl mb-2">🏢</div>
-              <div className="text-white text-sm text-center opacity-80">
-                Logo Oficial
-              </div>
+          {/* Mapeamento dos grupos (linhas) de patrocinadores */}
+          {sponsorGroups.map((group, index) => (
+            <div 
+              key={index}
+              className="flex flex-wrap justify-center gap-16"
+            >
+              {/* Mapeamento dos cards dentro do grupo */}
+              {group.map(sponsor => (
+                <SponsorCard key={sponsor.id} {...sponsor} />
+              ))}
             </div>
-            <div className="w-full md:w-64 lg:w-64 bg-[var(--color-highlight)] rounded-lg h-48 flex flex-col items-center justify-center hover:bg-[var(--color-light-blue)] transition-colors duration-300 cursor-pointer p-6">
-              <div className="text-white text-6xl mb-2">🏭</div>
-              <div className="text-white text-sm text-center opacity-80">
-                Logo Oficial
-                <br />
-                <span className="text-xs">(Placeholder)</span>
-              </div>
-            </div>
-            <div className="w-full md:w-64 lg:w-64 bg-[var(--color-highlight)] rounded-lg h-48 flex flex-col items-center justify-center hover:bg-[var(--color-light-blue)] transition-colors duration-300 cursor-pointer p-6">
-              <div className="text-white text-6xl mb-2">🏬</div>
-              <div className="text-white text-sm text-center opacity-80">
-                Logo Oficial
-                <br />
-                <span className="text-xs">(Placeholder)</span>
-              </div>
-            </div>
-          </div>
+          ))}
           
-          {/* Segunda linha - 2 cards centralizados */}
-          <div className="flex flex-wrap justify-center gap-16">
-            <div className="w-full md:w-64 lg:w-64 bg-[var(--color-highlight)] rounded-lg h-48 flex flex-col items-center justify-center hover:bg-[var(--color-light-blue)] transition-colors duration-300 cursor-pointer p-6">
-              <div className="text-white text-6xl mb-2">🏛️</div>
-              <div className="text-white text-sm text-center opacity-80">
-                Logo Oficial
-                <br />
-                <span className="text-xs">(Placeholder)</span>
+          {/* Mensagem de fallback caso não haja patrocinadores */}
+          {SPONSORS_DATA.length === 0 && (
+              <div className="text-center text-white/70 italic p-10 border border-dashed border-white/30 rounded-lg">
+                  <p>Ainda não há patrocinadores confirmados. Volte em breve!</p>
               </div>
-            </div>
-            <div className="w-full md:w-64 lg:w-64 bg-[var(--color-highlight)] rounded-lg h-48 flex flex-col items-center justify-center hover:bg-[var(--color-light-blue)] transition-colors duration-300 cursor-pointer p-6">
-              <div className="text-white text-6xl mb-2">🏪</div>
-              <div className="text-white text-sm text-center opacity-80">
-                Logo Oficial
-                <br />
-                <span className="text-xs">(Placeholder)</span>
-              </div>
-            </div>
-          </div>
+          )}
         </div>
       </div>
     </section>

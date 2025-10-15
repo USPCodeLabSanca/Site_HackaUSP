@@ -11,21 +11,21 @@ interface MedalIconProps {
 const prizesData = [
   { 
     rank: "1º LUGAR", 
-    description: "Lorem ipsus", 
+    description: "R$4.000", 
     iconColor: "text-gold",
     bgColor: "bg-dark-blue",
     order: 1
   },
   { 
     rank: "2º LUGAR", 
-    description: "Lorem ipsus", 
+    description: "R$2.000", 
     iconColor: "text-silver", 
     bgColor: "bg-dark-blue",
     order: 2 
   },
   { 
     rank: "3º LUGAR", 
-    description: "Lorem ipsus", 
+    description: "R$1.000", 
     iconColor: "text-orange-prize", 
     bgColor: "bg-dark-blue",
     order: 3
@@ -62,7 +62,7 @@ const PrizesSection: React.FC = () => {
             <h3 className={`text-3xl font-bold font-orbitron mt-4 mb-2 ${firstPlace.iconColor}`}>
               {firstPlace.rank}
             </h3>
-            <p className="text-light-gray text-base">{firstPlace.description}</p>
+            <p className="text-light-gray font-orbitron text-2xl">{firstPlace.description}</p>
           </div>
         )}
 
@@ -77,7 +77,7 @@ const PrizesSection: React.FC = () => {
               <h3 className={`text-2xl font-bold font-orbitron mt-4 mb-1 ${item.iconColor}`}>
                 {item.rank}
               </h3>
-              <p className="text-light-gray text-base">{item.description}</p>
+              <p className="text-light-gray font-orbitron text-xl">{item.description}</p>
             </div>
           ))}
         </div>

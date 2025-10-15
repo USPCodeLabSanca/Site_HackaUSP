@@ -24,7 +24,7 @@ const Subscription: React.FC = () => {
         </div>
         <div>
           <a
-              href="#"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSf0NXXUtO2sdmwDLPyE579wz6Z-VAvxd2AQUckh5f1sDRZr8A/viewform"
               className="text-2xl mt-6 inline-block bg-highlight text-black font-semibold py-7 px-24 rounded-lg transition-colors duration-300 hover:bg-accent"
             >
               Inscreva-se

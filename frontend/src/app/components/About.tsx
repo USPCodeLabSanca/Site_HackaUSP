@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../assets/images/about.png";
+import logo from "../../../public/images/evento.png";
 import Image from "next/image"; 
 
 const About: React.FC = () => {
@@ -12,7 +12,7 @@ const About: React.FC = () => {
         O que é o Hacka-USP?
       </h2>
 
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-1 items-center">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         
         <div>
           <Image
@@ -23,14 +23,13 @@ const About: React.FC = () => {
           />
         </div>
 
-        <div className="text-left">
+        <div className="text-left ">
             <p className="text-2xl text-light-gray leading-12 text-justify">
-              Lorem ipsum dolor sit amet consectetur. Pellentesque 
-              nulla bibendum tristique lacinia. A enim libero turpis 
-              facilisi purus a quam. Nisl volutpat sit neque felis etiam 
-              sit in tristique libero. Blandit neque fames massa auctor 
-              velit elementum tempor. Ipsum ultricies venenatis nam sed 
-              elementum libero nunc aliquam. 
+              O HackathonUSP é uma iniciativa da USP que reúne a comunidade 
+              uspiana com um propósito transformador: desenvolver 
+              soluções tecnológicas de impacto que impulsionem a inovação 
+              dentro da universidade. O evento é organizado pelo Codelab 
+              em parceria com o Núcleo de Empreendedorismo da USP (NEU)
             </p>
 
             <a
