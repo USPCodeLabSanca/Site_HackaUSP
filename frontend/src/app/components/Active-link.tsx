@@ -26,13 +26,11 @@ export const ActiveLink = ({ children, href }: ActiveLinkProps) => {
       const sectionTop = scrollY + rect.top
       const sectionBottom = sectionTop + rect.height
 
-      const offset = 100
-      const currentScroll = scrollY + offset
+      // Calcula a posição central da tela
+      const viewportMiddle = scrollY + window.innerHeight / 2
 
-      // Verifica se a posição atual de rolagem está dentro dos limites da seção
-      const isInView =
-        currentScroll >= sectionTop - offset &&
-        currentScroll <= sectionBottom - offset
+      // Verifica se o centro da tela está dentro dos limites da seção
+      const isInView = viewportMiddle >= sectionTop && viewportMiddle < sectionBottom
 
       setIsActive(isInView)
     }
@@ -41,12 +39,14 @@ export const ActiveLink = ({ children, href }: ActiveLinkProps) => {
     const timeoutId = setTimeout(() => {
       handleScroll()
       window.addEventListener('scroll', handleScroll, { passive: true })
+      window.addEventListener('resize', handleScroll, { passive: true })
     }, 100)
 
     // Função de limpeza
     return () => {
       clearTimeout(timeoutId)
       window.removeEventListener('scroll', handleScroll)
+      window.removeEventListener('resize', handleScroll)
     }
   }, [href]) // Reexecuta se o href mudar
 

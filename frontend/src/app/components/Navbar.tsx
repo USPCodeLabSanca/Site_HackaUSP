@@ -9,6 +9,7 @@ import { ActiveLink } from './Active-link'
 export const Navbar = () => {
   // Estado para controlar se o menu mobile está aberto
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  
   // Função para alternar entre abrir e fecha o menu
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
 
