@@ -1,0 +1,57 @@
+@import 'tailwindcss';
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --color-light-blue: #1687bf;
+  --color-dark-blue: #041e37;
+  --color-accent: #155b7e;
+  --color-light-gray: #dde1e3;
+  --color-medium-gray: #909598;
+  --color-highlight: #179ada;
+  --color-gold: #ffd700;
+  --color-silver: #c0c0c0;
+  --color-bronze: #cd7f32;
+  --font-roboto: 'Roboto', sans-serif;
+  --font-orbitron: 'Orbitron', sans-serif;
+}
+
+@theme {
+  --color-light-blue: #1687bf;
+  --color-dark-blue: #041e37;
+  --color-accent: #155b7e;
+  --color-light-gray: #dde1e3;
+  --color-medium-gray: #909598;
+  --color-highlight: #179ada;
+  --color-gold: #ffd700;
+  --color-silver: #c0c0c0;
+  --color-orange-prize: #f7931e;
+  --font-roboto: 'Roboto', sans-serif;
+  --font-orbitron: 'Orbitron', sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-dark-blue);
+  color: var(--foreground);
+  font-family: var(--font-roboto);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-orbitron);
+}
