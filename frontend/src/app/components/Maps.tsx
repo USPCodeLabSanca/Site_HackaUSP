@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import dynamic from "next/dynamic";
 
 // Importação dinâmica para evitar problemas de SSR com Leaflet

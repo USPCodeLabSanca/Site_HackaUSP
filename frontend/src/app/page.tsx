@@ -1,6 +1,5 @@
 import { Navbar } from './components/Navbar'
 import { Header } from './components/Header'
-import Image from "next/image";
 import About from "./components/About"
 import EvaluationCriteria from "./components/EvaluationCriteria";
 import PrizesSection from "./components/PrizesSection";

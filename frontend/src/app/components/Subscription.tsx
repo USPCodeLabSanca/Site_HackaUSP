@@ -1,6 +1,4 @@
 import React from "react";
-import logo from "../../assets/images/about.png";
-import Image from "next/image"; 
 
 const Subscription: React.FC = () => {
   return (
