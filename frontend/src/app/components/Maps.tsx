@@ -15,7 +15,7 @@ const MapaLeaflet = dynamic(() => import('./MapaLeaflet'), {
 
 export default function Maps() {
   return (
-    <div className="min-h-screen" style={{ backgroundColor: '#041E37' }}>
+    <section id="como-chegar" className="min-h-screen" style={{ backgroundColor: '#041E37' }}>
 
       {/* Conteúdo Principal */}
       <div className="flex flex-col items-center justify-center min-h-screen px-6 py-24">
@@ -45,7 +45,7 @@ export default function Maps() {
           {/* Botão Google Maps */}
           <div className="flex justify-center">
             <a
-              href="https://www.google.com/maps/place/S%C3%A3o+Paulo,+SP/@-23.6824124,-46.5952992,10z/data=!3m1!4b1!4m6!3m5!1s0x94ce448183a461d1:0x9ba94b08ff335bae!8m2!3d-23.5557714!4d-46.6395571!16zL20vMDIycGZt?entry=ttu&g_ep=EgoyMDI1MDkyOC4wIKXMDSoASAFQAw%3D%3D"
+              href="https://maps.app.goo.gl/LJbxXMsR5sP4wovHA"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white font-semibold py-1 px-3 rounded-lg transition-all duration-300 flex items-center gap-3 shadow-lg hover:shadow-xl transform hover:scale-105"
@@ -72,6 +72,6 @@ export default function Maps() {
         </div>
 
       </div>
-    </div>
+    </section>
   );
 }

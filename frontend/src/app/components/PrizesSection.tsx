@@ -44,7 +44,7 @@ const PrizesSection: React.FC = () => {
   const otherPlaces = prizesData.filter(p => p.order !== 1);
 
   return (
-    <section className="bg-dark-blue py-16 px-4 sm:px-8 text-center font-roboto">
+    <section id="premios" className="bg-dark-blue py-16 px-4 sm:px-8 text-center font-roboto">
       <p className="text-light-gray text-sm tracking-widest uppercase mb-2">
         As melhores soluções serão contempladas com prêmios
       </p>

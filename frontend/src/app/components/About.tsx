@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const About: React.FC = () => {
   return (
-    <section className="bg-dark-blue py-16 px-4 sm:px-8 text-center font-roboto">
+    <section id="sobre" className="bg-dark-blue py-16 px-4 sm:px-8 text-center font-roboto">
       <p className="text-white text-xl md:text-2xl lg:text-3xl uppercase tracking-wide mb-2 font-roboto">
           SOBRE 
         </p>

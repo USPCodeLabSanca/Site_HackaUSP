@@ -7,6 +7,7 @@ import PrizesSection from "./components/PrizesSection";
 import Maps from "./components/Maps";
 import Sponsors from "./components/sponsors";
 import Subscription from "./components/Subscription";
+import Footer from './components/Footer';
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       <Subscription />
       <Maps />
       <Sponsors />
+      <Footer />
     </div>
   );
 }

@@ -82,7 +82,7 @@ export default function Sponsors() {
 
 
   return (
-    <section className="w-full py-16 px-4 bg-[var(--color-dark-blue)]">
+    <section id="apoio" className="w-full py-16 px-4 bg-[var(--color-dark-blue)]">
       <div className="max-w-6xl mx-auto">
         {/* Título da seção */}
         <div className="text-center mb-16">

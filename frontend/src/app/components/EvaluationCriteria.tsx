@@ -45,7 +45,7 @@ const criteriaData = [
 
 const EvaluationCriteria: React.FC = () => {
   return (
-    <section className="bg-dark-blue py-16 px-4 sm:px-8 text-center font-roboto">
+    <section id="criterios" className="bg-dark-blue py-16 px-4 sm:px-8 text-center font-roboto">
       <p className="text-light-gray text-sm tracking-widest uppercase mb-1">
         TODOS OS CRITÉRIOS SERÃO CONSIDERADOS
       </p>
