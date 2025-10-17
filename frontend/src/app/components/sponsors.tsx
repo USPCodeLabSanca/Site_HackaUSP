@@ -33,6 +33,14 @@ const SPONSORS_DATA: Sponsor[] = [
     link: "https://alice.com.br/", 
     width: 160, 
     height: 60, 
+  },
+  {
+    id: 4,
+    name: "FEA",
+    logoPath: "/assets/patrocinadores/fea-logo.png",
+    link: "https://www.fea.usp.br/alumini/fundo-patrimonial", 
+    width: 160, 
+    height: 60, 
   }
 ];
 
