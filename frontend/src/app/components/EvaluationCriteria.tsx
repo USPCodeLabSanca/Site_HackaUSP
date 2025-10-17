@@ -46,8 +46,8 @@ const criteriaData = [
 const EvaluationCriteria: React.FC = () => {
   return (
     <section id="criterios" className="bg-dark-blue py-16 px-4 sm:px-8 text-center font-roboto">
-      <p className="text-light-gray text-sm tracking-widest uppercase mb-1">
-        TODOS OS CRITÉRIOS SERÃO CONSIDERADOS
+      <p className="text-light-gray text-md tracking-widest uppercase mb-1">
+        Os critérios que serão considerados pelos jurados
       </p>
       <h2 className="text-4xl sm:text-5xl font-orbitron text-highlight mb-12">
         Critérios de avaliação
@@ -57,7 +57,7 @@ const EvaluationCriteria: React.FC = () => {
         {criteriaData.map((item, index) => (
           <div
             key={index}
-            className="p-8 border-2 border-highlight rounded-lg flex flex-col items-center text-center transition-transform hover:scale-[1.02] hover:shadow-2xl"
+            className="mx-6 md:mx-0 p-8 border-2 border-highlight rounded-lg flex flex-col items-center text-center transition-transform hover:scale-[1.02] hover:shadow-2xl"
           >
             {/* Ícone */}
             <div className="text-highlight mb-4">

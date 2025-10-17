@@ -19,10 +19,10 @@ export const Navbar = () => {
     { label: "Sobre", href: "#sobre" },
     { label: "Critérios", href: "#criterios" },
     { label: "Prêmios", href: "#premios" },
-    { label: "Programação", href: "#programacao" },
+    // { label: "Programação", href: "#programacao" },
     { label: "Inscrição", href: "#inscricao" },
     { label: "Como chegar", href: "#como-chegar" },
-    { label: "Edições Anteriores", href: "#edicoes" },
+    // { label: "Edições Anteriores", href: "#edicoes" },
     { label: "Apoio", href: "#apoio" },
   ];
 
