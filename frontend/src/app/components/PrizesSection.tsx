@@ -56,10 +56,10 @@ const PrizesSection: React.FC = () => {
         {/* Card do 1º lugar centralizado em cima */}
         {firstPlace && (
           <div
-            className={`p-10 bg-light-blue ${firstPlace.bgColor} rounded-lg flex flex-col items-center justify-center text-center shadow-xl w-full md:w-2/3 transition-transform hover:scale-[1.05]`}
+            className={`p-10 bg-light-blue ${firstPlace.bgColor} rounded-lg flex flex-col items-center justify-center text-center shadow-xl sm:w-2/3 w-10/12 transition-transform hover:scale-[1.05]`}
           >
             <MedalIcon iconColor={firstPlace.iconColor} size={64} />
-            <h3 className={`text-3xl font-bold font-orbitron mt-4 mb-2 ${firstPlace.iconColor}`}>
+            <h3 className={`mb-2 text-3xl font-bold font-orbitron mt-4 ${firstPlace.iconColor}`}>
               {firstPlace.rank}
             </h3>
             <p className="text-light-gray font-orbitron text-2xl">{firstPlace.description}</p>
@@ -67,11 +67,11 @@ const PrizesSection: React.FC = () => {
         )}
 
         {/* 2º e 3º lugares embaixo lado a lado */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
+        <div className="grid grid-cols-2 md:grid-cols-2 gap-6 w-full">
           {otherPlaces.map((item, index) => (
             <div
               key={index}
-              className={`p-8 bg-light-blue ${item.bgColor} rounded-lg flex flex-col items-center justify-center text-center shadow-md transition-transform hover:scale-[1.05]`}
+              className={`p-8 bg-light-blue ${item.bgColor} rounded-lg flex flex-col items-center justify-center text-center shadow-md md:w-full transition-transform hover:scale-[1.05]`}
             >
               <MedalIcon iconColor={item.iconColor} />
               <h3 className={`text-2xl font-bold font-orbitron mt-4 mb-1 ${item.iconColor}`}>

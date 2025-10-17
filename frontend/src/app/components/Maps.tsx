@@ -17,7 +17,7 @@ export default function Maps() {
     <section id="como-chegar" className="min-h-screen" style={{ backgroundColor: '#041E37' }}>
 
       {/* Conteúdo Principal */}
-      <div className="flex flex-col items-center justify-center min-h-screen px-6 py-24">
+      <div className="mx-6 sm:mx-0 flex flex-col items-center justify-center min-h-screen px-6 py-24">
         
         {/* Header */}
         <div className="text-center mb-10">

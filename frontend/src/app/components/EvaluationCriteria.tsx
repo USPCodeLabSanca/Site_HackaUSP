@@ -57,7 +57,7 @@ const EvaluationCriteria: React.FC = () => {
         {criteriaData.map((item, index) => (
           <div
             key={index}
-            className="p-8 border-2 border-highlight rounded-lg flex flex-col items-center text-center transition-transform hover:scale-[1.02] hover:shadow-2xl"
+            className="mx-6 md:mx-0 p-8 border-2 border-highlight rounded-lg flex flex-col items-center text-center transition-transform hover:scale-[1.02] hover:shadow-2xl"
           >
             {/* Ícone */}
             <div className="text-highlight mb-4">
