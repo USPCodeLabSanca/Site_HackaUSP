@@ -45,7 +45,7 @@ const PrizesSection: React.FC = () => {
 
   return (
     <section id="premios" className="bg-dark-blue py-16 px-4 sm:px-8 text-center font-roboto">
-      <p className="text-light-gray text-sm tracking-widest uppercase mb-2">
+      <p className="text-light-gray text-sm sm:text-lg tracking-widest uppercase mb-2">
         As melhores soluções serão contempladas com prêmios
       </p>
       <h2 className="text-4xl sm:text-5xl font-orbitron text-highlight mb-12">

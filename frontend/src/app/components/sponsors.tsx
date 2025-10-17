@@ -58,7 +58,7 @@ export default function Sponsors() {
       <BaseTag
         key={id}
         {...linkProps}
-        className="w-full md:w-64 lg:w-64 bg-[var(--color-highlight)] rounded-lg h-48 flex flex-col items-center justify-center hover:bg-[var(--color-light-blue)] transition-colors duration-300 cursor-pointer p-2"
+        className="w-80 md:w-64 bg-[var(--color-highlight)] rounded-lg h-48 flex flex-col items-center justify-center hover:bg-[var(--color-light-blue)] transition-colors duration-300 cursor-pointer p-2"
       >
         {/* Área da Logo */}
         <div className="relative w-full max-w-full flex justify-center items-center h-2/3">
@@ -82,7 +82,7 @@ export default function Sponsors() {
     );
   };
 
-  const chunkSize = 3;
+  const chunkSize = 4;
   const sponsorGroups = [];
   for (let i = 0; i < SPONSORS_DATA.length; i += chunkSize) {
     sponsorGroups.push(SPONSORS_DATA.slice(i, i + chunkSize));
@@ -94,10 +94,10 @@ export default function Sponsors() {
       <div className="max-w-6xl mx-auto">
         {/* Título da seção */}
         <div className="text-center mb-16">
-          <p className="text-white text-xl md:text-2xl lg:text-3xl uppercase tracking-wide mb-2 font-roboto">
+          <p className="text-light-gray text-sm sm:text-lg uppercase tracking-wide mb-2 font-roboto">
             PATROCINADORES 
           </p>
-          <h3 className="text-4xl md:text-5xl font-bold mb-10 font-orbitron" style={{ color: '#179ADA' }}>
+          <h3 className="text-4xl md:text-5xl mb-10 font-orbitron" style={{ color: '#179ADA' }}>
             Apoio
           </h3>
         </div>
@@ -108,7 +108,7 @@ export default function Sponsors() {
           {sponsorGroups.map((group, index) => (
             <div 
               key={index}
-              className="flex flex-wrap justify-center gap-16"
+              className="flex flex-wrap justify-center gap-8 md:gap-16 mx-10 md:mx-0"
             >
               {/* Mapeamento dos cards dentro do grupo */}
               {group.map(sponsor => (

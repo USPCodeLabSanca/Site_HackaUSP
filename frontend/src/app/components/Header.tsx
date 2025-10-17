@@ -16,11 +16,11 @@ export const Header = () => {
       />
 
       <div className="relative z-10 text-white mt-10 lg:mt-25">
-        <h1 className="text-3xl md:text-5xl lg:text-7xl font-bold mb-2 md:mb-5 lg:mb-8">
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-2 md:mb-5 lg:mb-8">
           HACKATHON-USP
         </h1>
         <h2 className="text-base md:text-xl lg:text-3xl font-semibold text-highlight">
-          9ª edição do maior hackathon da USP
+          8ª edição do maior hackathon da USP
         </h2>
         <div className="mt-10 md:mt-20 lg:mt-30">
           <Countdown targetDate="2025-11-01T08:00:00" />

@@ -21,13 +21,13 @@ export default function Maps() {
         
         {/* Header */}
         <div className="text-center mb-10">
-          <p className="text-white text-sm uppercase tracking-wide mb-2 font-roboto">
+          <p className="text-light-gray text-sm sm:text-lg uppercase tracking-wide mb-2 font-roboto">
             LOCAL DO EVENTO
           </p>
-          <h1 className="text-4xl md:text-5xl font-bold mb-10 font-orbitron" style={{ color: '#179ADA' }}>
+          <h1 className="text-4xl md:text-5xl mb-10 font-orbitron" style={{ color: '#179ADA' }}>
             Como Chegar
           </h1>
-          <h2 className="text-white text-2xl md:text-3xl font-semibold mb-2 font-roboto">
+          <h2 className="text-light-gray text-2xl md:text-3xl font-semibold mb-2 font-roboto">
             Alice
           </h2>
           <p className="text-gray-300 text-lg max-w-md font-roboto mb-px">
