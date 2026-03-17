@@ -1,7 +1,9 @@
-# Site HackaUsp
+# Site do HackathonUSP
 
 ## 🧪 Sobre o Projeto
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel ullamcorper nisi. Pellentesque luctus laoreet blandit. Fusce massa est, fermentum sit amet aliquet ut, viverra ut neque. Suspendisse in justo et nunc lacinia vehicula. Aliquam condimentum eros sit amet nulla auctor, non vestibulum dui volutpat. Donec vestibulum placerat consectetur. Quisque imperdiet faucibus lacus, ut fringilla neque bibendum vitae.
+O **HackathonUSP** é uma iniciativa da USP que reúne a comunidade uspiana com um propósito transformador: desenvolver soluções tecnológicas de impacto que impulsionem a inovação dentro da universidade. O evento é organizado pelo Codelab em parceria com o Núcleo de Empreendedorismo da USP (NEU).
+
+O site desse Hackathon foi desenvolvido pelos membros do Dev.Boost, a frente de projetos do USPCodeLab Sanca!
 
 ---
 
@@ -37,6 +39,8 @@ http://localhost:3000
 ```
 
 ## 🤝 Como Contribuir
+
+Seguimos o modelo [GitFlow](https://www.alura.com.br/artigos/git-flow-o-que-e-como-quando-utilizar):
 
 1. Crie uma branch para sua feature/fix a partir da develop:
    `git checkout -b minha-feature`
