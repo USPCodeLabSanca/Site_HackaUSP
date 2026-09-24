@@ -17,13 +17,13 @@ export const Navbar = () => {
   const links = [
     { label: "Início", href: "#inicio" },
     { label: "Sobre", href: "#sobre" },
-    { label: "Critérios", href: "#criterios" },
-    { label: "Prêmios", href: "#premios" },
+    // { label: "Critérios", href: "#criterios" },
+    // { label: "Prêmios", href: "#premios" },
     // { label: "Programação", href: "#programacao" },
     { label: "Inscrição", href: "#inscricao" },
-    { label: "Como chegar", href: "#como-chegar" },
+    // { label: "Como chegar", href: "#como-chegar" },
     // { label: "Edições Anteriores", href: "#edicoes" },
-    { label: "Apoio", href: "#apoio" },
+    // { label: "Apoio", href: "#apoio" },
   ];
 
   return (

@@ -8,7 +8,7 @@ export const Header = () => {
       className="relative px-4 sm:px-8 text-center font-roboto h-[400px] md:h-[500px] lg:h-[600px] flex flex-col justify-center items-center overflow-hidden mt-16"
     >
       <Image
-        src="/assets/background.svg"
+        src="/assets/background.jpg"
         alt="background"
         fill
         priority
@@ -17,13 +17,13 @@ export const Header = () => {
 
       <div className="relative z-10 text-white mt-10 lg:mt-25">
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-2 md:mb-5 lg:mb-8">
-          HACKATHON-USP
+          HACKATHON USP
         </h1>
         <h2 className="text-base md:text-xl lg:text-3xl font-semibold text-highlight">
-          8ª edição do maior hackathon da USP
+          9ª edição do maior hackathon da USP
         </h2>
         <div className="mt-10 md:mt-20 lg:mt-30">
-          <Countdown targetDate="2025-11-01T08:00:00" />
+          <Countdown targetDate="2026-11-07T08:00:00" />
         </div>
       </div>
     </section>

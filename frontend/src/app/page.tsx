@@ -1,10 +1,10 @@
 import { Navbar } from './components/Navbar'
 import { Header } from './components/Header'
 import About from "./components/About"
-import EvaluationCriteria from "./components/EvaluationCriteria";
-import PrizesSection from "./components/PrizesSection";
-import Maps from "./components/Maps";
-import Sponsors from "./components/sponsors";
+//import EvaluationCriteria from "./components/EvaluationCriteria";
+//import PrizesSection from "./components/PrizesSection";
+//import Maps from "./components/Maps";
+//import Sponsors from "./components/sponsors";
 import Subscription from "./components/Subscription";
 import Footer from './components/Footer';
 
@@ -14,11 +14,11 @@ export default function Home() {
       <Navbar />
       <Header />
       <About />
-      <EvaluationCriteria />
-      <PrizesSection />
+      {/*<EvaluationCriteria />*/}
+      {/*<PrizesSection />*/}
       <Subscription />
-      <Maps />
-      <Sponsors />
+      {/*<Maps />*/}
+      {/*<Sponsors />*/}
       <Footer />
     </div>
   );

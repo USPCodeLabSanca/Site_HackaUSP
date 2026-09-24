@@ -48,7 +48,7 @@ export default function SimpleFooter() {
           <div className="flex items-center space-x-3 text-sm md:text-base">
             {/* Texto de Copyright */}
             <p className="whitespace-nowrap">
-              &copy;{currentYear} Hackathon USP
+              &copy; 2016 - {currentYear} Hackathon USP
             </p>
 
             {/* Separador visual */}
