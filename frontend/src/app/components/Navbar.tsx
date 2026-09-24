@@ -20,9 +20,9 @@ export const Navbar = () => {
     // { label: "Critérios", href: "#criterios" },
     // { label: "Prêmios", href: "#premios" },
     // { label: "Programação", href: "#programacao" },
+    { label: "Edições Anteriores", href: "#edicoes" },
     { label: "Inscrição", href: "#inscricao" },
     // { label: "Como chegar", href: "#como-chegar" },
-    // { label: "Edições Anteriores", href: "#edicoes" },
     // { label: "Apoio", href: "#apoio" },
   ];
 

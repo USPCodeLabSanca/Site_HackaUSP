@@ -14,7 +14,7 @@ const Subscription: React.FC = () => {
 
         <div className="text-left">
             <p className="text-xl md:text-2xl mx-6 md:mx-0 mb-4 text-light-gray leading-8 text-center">
-              Não perca as oportunidades do maior Hackathon da USP!
+              Não perca as oportunidades do maior Hackathon da USP!
             </p>
             <p className="text-xl md:text-2xl mx-6 md:mx-0 text-light-gray leading-8 text-center">
               Chame seus amigos e tenha chance de ganhar ótimas experiências e prêmios!
