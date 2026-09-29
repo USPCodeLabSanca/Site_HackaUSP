@@ -1,33 +1,30 @@
 @import 'tailwindcss';
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-  --color-light-blue: #1687bf;
-  --color-dark-blue: #041e37;
-  --color-accent: #155b7e;
-  --color-light-gray: #dde1e3;
-  --color-medium-gray: #909598;
-  --color-highlight: #179ada;
-  --color-gold: #ffd700;
-  --color-silver: #c0c0c0;
-  --color-bronze: #cd7f32;
+@theme {
+  /* Cores */
+  --color-primary: #D12A34;       
+  --color-primary-dark: #841118;  
+  --color-primary-darker: #440909;
+  
+  --color-neutral-light: #dde1e3;
+  --color-neutral-medium: #909598;
+
+  --color-background: #0e0d0d;
+
+  --color-highlight: #ff3a47;
+
+  --color-prize-gold: #ffd700;
+  --color-prize-silver: #c0c0c0;
+  --color-prize-bronze: #cd7f32;
+
+  /* Fontes */
   --font-roboto: 'Roboto', sans-serif;
   --font-orbitron: 'Orbitron', sans-serif;
 }
 
-@theme {
-  --color-light-blue: #1687bf;
-  --color-dark-blue: #041e37;
-  --color-accent: #155b7e;
-  --color-light-gray: #dde1e3;
-  --color-medium-gray: #909598;
-  --color-highlight: #179ada;
-  --color-gold: #ffd700;
-  --color-silver: #c0c0c0;
-  --color-orange-prize: #f7931e;
-  --font-roboto: 'Roboto', sans-serif;
-  --font-orbitron: 'Orbitron', sans-serif;
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -42,7 +39,7 @@ html {
 }
 
 body {
-  background: var(--color-dark-blue);
+  background: var(--background);
   color: var(--foreground);
   font-family: var(--font-roboto);
 }

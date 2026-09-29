@@ -45,8 +45,8 @@ const criteriaData = [
 
 const EvaluationCriteria: React.FC = () => {
   return (
-    <section id="criterios" className="bg-dark-blue py-16 px-4 sm:px-8 text-center font-roboto">
-      <p className="text-light-gray text-md tracking-widest uppercase mb-1">
+    <section id="criterios" className="bg-background py-16 px-4 sm:px-8 text-center font-roboto">
+      <p className="text-neutral-light text-md tracking-widest uppercase mb-1">
         Os critérios que serão considerados pelos jurados
       </p>
       <h2 className="text-4xl sm:text-5xl font-orbitron text-highlight mb-12">
@@ -70,7 +70,7 @@ const EvaluationCriteria: React.FC = () => {
             </h3>
             
             {/* Descrição */}
-            <p className="text-light-gray text-base">
+            <p className="text-neutral-light text-base">
               {item.description}
             </p>
           </div>

@@ -16,8 +16,8 @@ const About: React.FC = () => {
   ];
 
   return (
-    <section id="sobre" className="bg-dark-blue py-16 px-4 sm:px-8 text-center font-roboto">
-      <p className="text-light-gray text-sm sm:text-lg uppercase tracking-wide mb-2 font-roboto">
+    <section id="sobre" className="bg-background py-16 px-4 sm:px-8 text-center font-roboto">
+      <p className="text-neutral-light text-sm sm:text-lg uppercase tracking-wide mb-2 font-roboto">
           SOBRE 
         </p>
       <h2 className="text-4xl sm:text-5xl font-orbitron text-highlight mb-12">
@@ -54,7 +54,7 @@ const About: React.FC = () => {
         </div>
 
         <div className="text-left ">
-            <p className="text-xl md:text-2xl mx-6 md:mx-0 text-light-gray leading-12 text-justify">
+            <p className="text-xl md:text-2xl mx-6 md:mx-0 text-neutral-light leading-12 text-justify">
               O HackathonUSP é uma iniciativa da USP que reúne a comunidade 
               uspiana com um propósito transformador: desenvolver 
               soluções tecnológicas de impacto que impulsionem a inovação 
@@ -64,7 +64,7 @@ const About: React.FC = () => {
 
             {/* <a
               href="#"
-              className="text-2xl mt-6 inline-block bg-highlight text-black font-semibold py-7 px-9 rounded-lg transition-colors duration-300 hover:bg-accent"
+              className="text-2xl mt-6 inline-block bg-highlight text-black font-semibold py-7 px-9 rounded-lg transition-colors duration-300 hover:bg-primary-darker"
             >
               Leia o regulamento
             </a> */}

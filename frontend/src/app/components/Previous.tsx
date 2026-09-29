@@ -4,8 +4,7 @@ import React from "react";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-import 'swiper/css/pagination';
-import { Autoplay, Pagination } from 'swiper/modules';
+import { Autoplay } from 'swiper/modules';
 
 const Previous: React.FC = () => {
   const editions = [
@@ -66,10 +65,10 @@ const Previous: React.FC = () => {
   ];
 
   return (
-    <section id="edicoes" className="bg-dark-blue py-16 px-4 sm:px-8 text-center font-roboto overflow-hidden">
+    <section id="edicoes" className="bg-background pt-8 px-4 sm:px-8 text-center font-roboto overflow-hidden">
       <div className="max-w-6xl mx-auto">
         
-        <p className="text-light-gray text-sm sm:text-lg uppercase tracking-wide mb-2 font-roboto">
+        <p className="text-neutral-light text-sm sm:text-lg uppercase tracking-wide mb-2 font-roboto">
           NOSSA HISTÓRIA 
         </p>
         <h2 className="text-4xl sm:text-5xl font-orbitron text-highlight mb-6">
@@ -83,10 +82,9 @@ const Previous: React.FC = () => {
             spaceBetween={30}
             autoplay={{
               delay: 3500,
-              disableOnInteraction: false,
+              disableOnInteraction: true,
             }}
-            pagination={{ clickable: true, dynamicBullets: true }}
-            modules={[Autoplay, Pagination]}
+            modules={[Autoplay]}
             breakpoints={{
               640: {
                 slidesPerView: 1,
@@ -102,7 +100,7 @@ const Previous: React.FC = () => {
           >
             {editions.map((edition, index) => (
               <SwiperSlide key={edition.id}>
-                <div className="flex flex-col group relative rounded-xl overflow-hidden bg-slate-900 border border-highlight/30 hover:border-highlight h-full z-10 shadow-lg">
+                <div className="flex flex-col group relative rounded-xl overflow-hidden bg-primary-darker border border-highlight/30 hover:border-highlight h-full z-10 shadow-lg">
 
                   <div className="relative w-full h-[220px] overflow-hidden">
                     <Image 
@@ -113,10 +111,10 @@ const Previous: React.FC = () => {
                       className="object-cover transition-transform duration-500 group-hover:scale-110"
                       priority={index === 0}
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent pointer-events-none"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-primary-darker via-transparent to-transparent pointer-events-none"></div>
                   </div>
 
-                  <div className="p-6 text-left flex flex-col flex-grow bg-slate-900">
+                  <div className="p-6 text-left flex flex-col flex-grow bg-primary-darker">
                     <span className="text-highlight font-orbitron font-bold text-sm tracking-widest mb-2 block">
                       {edition.date}
                     </span>

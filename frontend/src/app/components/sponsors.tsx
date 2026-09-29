@@ -58,7 +58,7 @@ export default function Sponsors() {
       <BaseTag
         key={id}
         {...linkProps}
-        className="w-80 md:w-64 bg-[var(--color-highlight)] rounded-lg h-48 flex flex-col items-center justify-center hover:bg-[var(--color-light-blue)] transition-colors duration-300 cursor-pointer p-2"
+        className="w-80 md:w-64 bg-[var(--color-highlight)] rounded-lg h-48 flex flex-col items-center justify-center hover:bg-[var(--color-primary)] transition-colors duration-300 cursor-pointer p-2"
       >
         {/* Área da Logo */}
         <div className="relative w-full max-w-full flex justify-center items-center h-2/3">
@@ -90,11 +90,11 @@ export default function Sponsors() {
 
 
   return (
-    <section id="apoio" className="w-full py-16 px-4 bg-[var(--color-dark-blue)]">
+    <section id="apoio" className="w-full py-16 px-4 bg-[var(--color-primary-dark)]">
       <div className="max-w-6xl mx-auto">
         {/* Título da seção */}
         <div className="text-center mb-16">
-          <p className="text-light-gray text-sm sm:text-lg uppercase tracking-wide mb-2 font-roboto">
+          <p className="text-neutral-light text-sm sm:text-lg uppercase tracking-wide mb-2 font-roboto">
             PATROCINADORES 
           </p>
           <h3 className="text-4xl md:text-5xl mb-10 font-orbitron" style={{ color: '#179ADA' }}>

@@ -14,20 +14,20 @@ const MapaLeaflet = dynamic(() => import('./MapaLeaflet'), {
 
 export default function Maps() {
   return (
-    <section id="como-chegar" className="min-h-screen" style={{ backgroundColor: '#041E37' }}>
+    <section id="como-chegar" className="min-h-screen bg-background">
 
       {/* Conteúdo Principal */}
       <div className="mx-6 sm:mx-0 flex flex-col items-center justify-center min-h-screen px-6 py-24">
         
         {/* Header */}
         <div className="text-center mb-10">
-          <p className="text-light-gray text-sm sm:text-lg uppercase tracking-wide mb-2 font-roboto">
+          <p className="text-neutral-light text-sm sm:text-lg uppercase tracking-wide mb-2 font-roboto">
             LOCAL DO EVENTO
           </p>
           <h1 className="text-4xl md:text-5xl mb-10 font-orbitron" style={{ color: '#179ADA' }}>
             Como Chegar
           </h1>
-          <h2 className="text-light-gray text-2xl md:text-3xl font-semibold mb-2 font-roboto">
+          <h2 className="text-neutral-light text-2xl md:text-3xl font-semibold mb-2 font-roboto">
             Alice
           </h2>
           <p className="text-gray-300 text-lg max-w-md font-roboto mb-px">

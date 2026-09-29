@@ -5,14 +5,14 @@ export const Header = () => {
   return (
     <section
       id="inicio"
-      className="relative px-4 sm:px-8 text-center font-roboto h-[400px] md:h-[500px] lg:h-[600px] flex flex-col justify-center items-center overflow-hidden mt-16"
+      className="bg-background relative px-4 sm:px-8 text-center font-roboto h-[400px] md:h-[500px] lg:h-[600px] flex flex-col justify-center items-center overflow-hidden mt-16"
     >
       <Image
         src="/assets/background.jpg"
         alt="background"
         fill
         priority
-        className="object-cover object-center -z- opacity-20 blur-[2px]"
+        className="object-cover object-center -z- opacity-50 blur-[2px]"
       />
 
       <div className="relative z-10 text-white mt-10 lg:mt-25">

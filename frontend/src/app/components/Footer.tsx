@@ -20,11 +20,10 @@ export default function SimpleFooter() {
 
   return (
     <footer
-      className="w-full text-[var(--color-light-gray)]"
-      style={{ backgroundColor: "var(--color-dark-blue)" }}
+      className="w-full text-neutral-light bg-background"
     >
       {/* Linha Divisória Superior (Para separar de outras seções) */}
-      <div className="border-t border-[var(--color-accent)]"></div>
+      <div className="border-t border-primary-darke"></div>
 
       <div className="max-w-6xl mx-auto px-6 py-6 md:py-8">
         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
@@ -37,7 +36,7 @@ export default function SimpleFooter() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={`Link para o ${item.label} do Hackathon USP`}
-                className="text-xl transition-colors duration-300 hover:text-[var(--color-highlight)]"
+                className="text-xl transition-colors duration-300 hover:text-highlight"
               >
                 <item.icon />
               </a>
@@ -52,7 +51,7 @@ export default function SimpleFooter() {
             </p>
 
             {/* Separador visual */}
-            <span className="text-[var(--color-accent)] hidden md:inline">
+            <span className="text-primary-darker hidden md:inline">
               |
             </span>
 
