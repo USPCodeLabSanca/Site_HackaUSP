@@ -12,7 +12,7 @@ export const Header = () => {
         alt="background"
         fill
         priority
-        className="object-cover object-center -z- opacity-50 blur-[2px]"
+        className="object-cover object-center -z- opacity-25 blur-[2px]"
       />
 
       <div className="relative z-10 text-white mt-10 lg:mt-25">

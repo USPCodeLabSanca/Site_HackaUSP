@@ -57,7 +57,7 @@ export const Countdown = ({ targetDate }: CountdownProps) => {
   }, [calculateTimeLeft]) // reexecuta se calculateTimeLeft mudar
 
   const TimeBox = ({ value, label }: { value: number; label: string }) => (
-    <div className="bg-primary shadow-lg p-4 md:p-6 w-[68px] h-[60px] md:w-[120px] md:h-[100px] lg:w-[150px] lg:h-[130px] flex flex-col items-center justify-center shrink-0 text-black">
+    <div className="bg-primary-dark text-white shadow-lg p-4 md:p-6 w-[68px] h-[60px] md:w-[120px] md:h-[100px] lg:w-[150px] lg:h-[130px] flex flex-col items-center justify-center shrink-0">
       <span className="text-base md:text-2xl lg:text-4xl font-bold leading-none">
         {/* Formata o valor para dois dígitos */}
         {value.toString().padStart(2, '0')}

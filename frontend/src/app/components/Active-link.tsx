@@ -53,10 +53,10 @@ export const ActiveLink = ({ children, href }: ActiveLinkProps) => {
   return (
     <Link
       href={href}
-      className={`text-sm xl:text-base transition-all duration-200 hover:font-bold lg:hover:text-highlight ${
+      className={`text-sm xl:text-base transition-all duration-200 lg:hover:text-highlight ${
         isActive
-          ? 'lg:text-highlight font-semibold lg:font-bold'
-          : 'text-neutral-light font-normal'
+          ? 'lg:text-highlight'
+          : 'text-neutral-light'
       }`}
     >
       {children}
