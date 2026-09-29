@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { FaInstagram, FaTiktok } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
 
 // Dados dos links
 const SOCIAL_LINKS = [
@@ -7,11 +7,6 @@ const SOCIAL_LINKS = [
     icon: FaInstagram,
     href: "https://www.instagram.com/hackathonusp/",
     label: "Instagram",
-  },
-  { 
-    icon: FaTiktok, 
-    href: "#", 
-    label: "TikTok" 
   },
 ];
 
