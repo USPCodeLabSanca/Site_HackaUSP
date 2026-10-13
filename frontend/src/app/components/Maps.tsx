@@ -44,7 +44,7 @@ export default function Maps() {
           {/* Botão Google Maps */}
           <div className="flex justify-center">
             <a
-              href="https://share.google/wGtCkqvlxSbC1nuRZ"
+              href="https://maps.app.goo.gl/DGx9QccaWQCm3VSt6"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white font-semibold py-1 px-3 rounded-lg transition-all duration-300 flex items-center gap-3 shadow-lg hover:shadow-xl transform hover:scale-105 bg-highlight hover:bg-primary"
