@@ -49,14 +49,14 @@ const SponsorCard = ({ id, name, link, logoPath, width, height }: Sponsor) => {
     className="group flex h-40 items-center justify-center rounded-xl border border-white/10 bg-white/5 p-8 backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:border-red-500/60 hover:bg-white/10"
     >
     {/* Área da Logo */}
-    <div className="relative w-full max-w-full flex justify-center items-center brightness-0 invert">
+    <div className="relative w-full max-w-full flex justify-center items-center">
       {logoPath ? (
       <Image
         src={logoPath}
         alt={name} 
         width={width || 200}
         height={height || 80}
-        className="object-contain max-h-full max-w-full p-2"
+        className="object-contain max-h-full max-w-full p-2 brightness-0 invert"
       />
       ) : (
       // FALLBACK - Se o logoPath não for fornecido, mostra um placeholder

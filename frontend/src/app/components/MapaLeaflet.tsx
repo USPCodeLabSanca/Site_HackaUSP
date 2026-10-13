@@ -23,7 +23,7 @@ function MapaLeaflet() {
     <MapContainer 
       center={position} 
       zoom={14} 
-      scrollWheelZoom={true} 
+      scrollWheelZoom={false} 
       style={{ height: '500px', width: '100%' }}
     >
       <TileLayer

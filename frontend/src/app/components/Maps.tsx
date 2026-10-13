@@ -14,10 +14,10 @@ const MapaLeaflet = dynamic(() => import('./MapaLeaflet'), {
 
 export default function Maps() {
   return (
-    <section id="como-chegar" className="min-h-screen bg-background">
+    <section id="como-chegar" className="bg-background">
 
       {/* Conteúdo Principal */}
-      <div className="mx-6 sm:mx-0 pt-16 flex flex-col items-center justify-center min-h-screen px-6">
+      <div className="mx-6 sm:mx-0 pt-16 flex flex-col items-center justify-center px-6">
         
         {/* Header */}
         <div className="text-center mb-10">

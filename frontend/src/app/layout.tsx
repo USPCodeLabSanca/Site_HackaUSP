@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Orbitron, Roboto } from 'next/font/google'
 import './globals.css'
 
@@ -15,6 +15,10 @@ const roboto = Roboto({
 export const metadata: Metadata = {
   title: 'HackathonUSP 2026',
   description: 'O maior hackathon da USP'
+}
+
+export const viewport: Viewport = {
+  colorScheme: 'dark',
 }
 
 export default function RootLayout({
