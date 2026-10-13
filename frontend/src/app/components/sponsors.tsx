@@ -76,11 +76,11 @@ export default function Sponsors() {
   <section id="apoio" className="w-full py-16 px-4 bg-background">
     <div className="max-w-6xl mx-auto">
       {/* Título da seção */}
-      <div className="text-center mb-16">
+      <div className="text-center mb-8">
         <p className="text-neutral-light text-sm sm:text-lg uppercase tracking-wide mb-2 font-roboto">
           PATROCINADORES 
         </p>
-        <h3 className="text-4xl md:text-5xl mb-10 font-orbitron text-highlight">
+        <h3 className="text-4xl md:text-5xl font-orbitron text-highlight">
           Apoio
         </h3>
       </div>

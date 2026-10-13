@@ -1,11 +1,10 @@
-// src/components/MapaLeaflet.tsx
-
+'use client';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 
 // Coordenadas iniciais
-const position: L.LatLngExpression = [-23.572637934713782, -46.69245796510123]; // São Paulo
+const position: L.LatLngExpression = [-23.572297, -46.689650]; // São Paulo
 
 // Configuração do ícone do marcador
 // Esta é uma solução comum para problemas com ícones no Leaflet + React
@@ -24,7 +23,7 @@ function MapaLeaflet() {
     <MapContainer 
       center={position} 
       zoom={14} 
-      scrollWheelZoom={false} 
+      scrollWheelZoom={true} 
       style={{ height: '500px', width: '100%' }}
     >
       <TileLayer

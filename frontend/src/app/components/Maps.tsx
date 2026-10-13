@@ -17,21 +17,21 @@ export default function Maps() {
     <section id="como-chegar" className="min-h-screen bg-background">
 
       {/* Conteúdo Principal */}
-      <div className="mx-6 sm:mx-0 flex flex-col items-center justify-center min-h-screen px-6 py-24">
+      <div className="mx-6 sm:mx-0 pt-16 flex flex-col items-center justify-center min-h-screen px-6">
         
         {/* Header */}
         <div className="text-center mb-10">
           <p className="text-neutral-light text-sm sm:text-lg uppercase tracking-wide mb-2 font-roboto">
             LOCAL DO EVENTO
           </p>
-          <h1 className="text-4xl md:text-5xl mb-10 font-orbitron" style={{ color: '#179ADA' }}>
+          <h1 className="text-4xl md:text-5xl mb-10 font-orbitron text-highlight">
             Como Chegar
           </h1>
           <h2 className="text-neutral-light text-2xl md:text-3xl font-semibold mb-2 font-roboto">
-            Alice
+            Capim
           </h2>
           <p className="text-gray-300 text-lg max-w-md font-roboto mb-px">
-            Av. Rebouças, 3535 - Pinheiros, São Paulo - SP, 05401-400
+            Av. Brig. Faria Lima, 1713 - Jardim Paulistano, São Paulo - SP, 01451-000
           </p>
         </div>
 
@@ -44,19 +44,10 @@ export default function Maps() {
           {/* Botão Google Maps */}
           <div className="flex justify-center">
             <a
-              href="https://maps.app.goo.gl/LJbxXMsR5sP4wovHA"
+              href="https://share.google/wGtCkqvlxSbC1nuRZ"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white font-semibold py-1 px-3 rounded-lg transition-all duration-300 flex items-center gap-3 shadow-lg hover:shadow-xl transform hover:scale-105"
-              style={{ 
-                backgroundColor: '#179ADA',
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = '#1372a1ff';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = '#179ADA';
-              }}
+              className="text-white font-semibold py-1 px-3 rounded-lg transition-all duration-300 flex items-center gap-3 shadow-lg hover:shadow-xl transform hover:scale-105 bg-highlight hover:bg-primary"
             >
               <svg 
                 className="w-5 h-5"

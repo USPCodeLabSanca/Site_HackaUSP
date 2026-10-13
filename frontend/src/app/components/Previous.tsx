@@ -75,7 +75,7 @@ const Previous: React.FC = () => {
           Edições Anteriores
         </h2>
         
-        <div className="relative w-full pb-10">
+        <div className="relative w-full">
           <div className="hidden md:block absolute top-[50%] left-0 right-0 h-1 bg-highlight/20 -z-0"></div>
 
           <Swiper
