@@ -6,7 +6,7 @@ import Previous from './components/Previous';
 //import PrizesSection from "./components/PrizesSection";
 import Subscription from "./components/Subscription";
 //import Maps from "./components/Maps";
-//import Sponsors from "./components/sponsors";
+import Sponsors from "./components/sponsors";
 import Footer from './components/Footer';
 
 export default function Home() {
@@ -20,7 +20,7 @@ export default function Home() {
       {/*<PrizesSection />*/}
       <Subscription />
       {/*<Maps />*/}
-      {/*<Sponsors />*/}
+      <Sponsors />
       <Footer />
     </div>
   );

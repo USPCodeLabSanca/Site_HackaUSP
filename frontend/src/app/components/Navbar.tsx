@@ -23,7 +23,7 @@ export const Navbar = () => {
     { label: "Edições Anteriores", href: "#edicoes" },
     { label: "Inscrição", href: "#inscricao" },
     // { label: "Como chegar", href: "#como-chegar" },
-    // { label: "Apoio", href: "#apoio" },
+    { label: "Apoio", href: "#apoio" },
   ];
 
   return (
