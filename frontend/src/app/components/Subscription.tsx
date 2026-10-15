@@ -24,7 +24,7 @@ const Subscription: React.FC = () => {
           <a
               // quando houver link de inscrição: adicionar href e as classes "bg-highlight hover:bg-primary-darker"
               href="https://forms.gle/WcoDN1SYLFCyKqp68"
-              className="text-2xl inline-block bg-highlight hover:bg-primary text-white font-semibold py-7 px-24 rounded-lg transition-colors duration-300"
+              className="text-2xl inline-block bg-highlight hover:bg-primary light:hover:bg-primary-dark text-white font-semibold py-7 px-24 rounded-lg transition-colors duration-300"
             >
               Inscreva-se
             </a>

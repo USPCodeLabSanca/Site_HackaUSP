@@ -53,12 +53,20 @@ export const ActiveLink = ({ children, href }: ActiveLinkProps) => {
   return (
     <Link
       href={href}
-      className={`text-sm xl:text-base transition-all duration-200 lg:hover:text-highlight ${
+      aria-current={isActive ? 'true' : undefined}
+      className={`inline-flex items-center gap-2 text-sm xl:text-base transition-all duration-200 lg:hover:text-highlight ${
         isActive
-          ? 'lg:text-highlight'
+          ? 'text-white font-semibold lg:font-normal lg:text-highlight'
           : 'text-neutral-light'
       }`}
     >
+      {/* Bolinha de "página atual": só aparece no menu mobile */}
+      {isActive && (
+        <span
+          aria-hidden="true"
+          className="h-2 w-2 shrink-0 rounded-full bg-highlight lg:hidden"
+        />
+      )}
       {children}
     </Link>
   )

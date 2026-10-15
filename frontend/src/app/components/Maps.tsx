@@ -30,7 +30,7 @@ export default function Maps() {
           <h2 className="text-neutral-light text-2xl md:text-3xl font-semibold mb-2 font-roboto">
             Capim
           </h2>
-          <p className="text-gray-300 text-lg max-w-md font-roboto mb-px">
+          <p className="text-gray-300 light:text-neutral-700 text-lg max-w-md font-roboto mb-px">
             Av. Brig. Faria Lima, 1713 - Jardim Paulistano, São Paulo - SP, 01451-000
           </p>
         </div>
@@ -47,7 +47,7 @@ export default function Maps() {
               href="https://maps.app.goo.gl/DGx9QccaWQCm3VSt6"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white font-semibold py-1 px-3 rounded-lg transition-all duration-300 flex items-center gap-3 shadow-lg hover:shadow-xl transform hover:scale-105 bg-highlight hover:bg-primary"
+              className="text-white font-semibold py-1 px-3 rounded-lg transition-all duration-300 flex items-center gap-3 shadow-lg hover:shadow-xl transform hover:scale-105 bg-highlight hover:bg-primary light:hover:bg-primary-dark"
             >
               <svg 
                 className="w-5 h-5"

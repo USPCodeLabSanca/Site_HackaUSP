@@ -1,5 +1,6 @@
-import type { Metadata, Viewport } from 'next'
+import type { Metadata } from 'next'
 import { Orbitron, Roboto } from 'next/font/google'
+import { ThemeProvider } from './components/ThemeProvider'
 import './globals.css'
 
 const orbitron = Orbitron({
@@ -17,19 +18,15 @@ export const metadata: Metadata = {
   description: 'O maior hackathon da USP'
 }
 
-export const viewport: Viewport = {
-  colorScheme: 'dark',
-}
-
 export default function RootLayout({
   children
 }: Readonly<{
   children: React.ReactNode
 }>) {
   return (
-    <html lang="pt-BR">
+    <html lang="pt-BR" suppressHydrationWarning>
       <body className={`${orbitron.variable} ${roboto.variable} antialiased`}>
-        {children}
+        <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
   )

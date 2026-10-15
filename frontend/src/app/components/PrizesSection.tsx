@@ -55,8 +55,8 @@ const PrizesSection: React.FC = () => {
       <div className="max-w-4xl mx-auto flex flex-col items-center gap-8">
         {/* Card do 1º lugar centralizado em cima */}
         {firstPlace && (
-          <div // group flex h-40 items-center justify-center rounded-xl border border-white/10 bg-white/5 p-8 backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:border-red-500/60 hover:bg-white/10
-            className={`p-10${firstPlace.bgColor} flex flex-col items-center justify-center text-center sm:w-2/3 w-10/12 rounded-xl border border-white/10 bg-white/5 p-8 backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:border-red-500/60 hover:bg-white/10`}
+          <div
+            className={`p-10${firstPlace.bgColor} flex flex-col items-center justify-center text-center sm:w-2/3 w-10/12 rounded-xl border border-white/10 bg-white/5 p-8 backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:border-red-500/60 hover:bg-white/10 light:border-black/10 light:bg-black/5 light:hover:bg-black/10`}
           >
             <MedalIcon iconColor={firstPlace.iconColor} size={64} />
             <h3 className={`mb-2 text-3xl font-bold font-orbitron mt-4 ${firstPlace.iconColor}`}>
@@ -71,7 +71,7 @@ const PrizesSection: React.FC = () => {
           {otherPlaces.map((item, index) => (
             <div
               key={index}
-              className={`p-8${item.bgColor} flex flex-col items-center justify-center text-center md:w-full rounded-xl border border-white/10 bg-white/5 p-8 backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:border-red-500/60 hover:bg-white/10`}
+              className={`p-8${item.bgColor} flex flex-col items-center justify-center text-center md:w-full rounded-xl border border-white/10 bg-white/5 p-8 backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:border-red-500/60 hover:bg-white/10 light:border-black/10 light:bg-black/5 light:hover:bg-black/10`}
             >
               <MedalIcon iconColor={item.iconColor} />
               <h3 className={`text-2xl font-bold font-orbitron mt-4 mb-1 ${item.iconColor}`}>
