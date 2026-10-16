@@ -5,7 +5,7 @@ export const Header = () => {
   return (
     <section
       id="inicio"
-      className="bg-background relative px-4 sm:px-8 text-center font-roboto h-[400px] md:h-[500px] lg:h-[600px] flex flex-col justify-center items-center overflow-hidden mt-16"
+      className="bg-background relative px-4 sm:px-8 text-center font-roboto h-100 md:h-125 lg:h-150 flex flex-col justify-center items-center overflow-hidden mt-16 light:[--color-background:#0e0d0d] light:[--color-highlight:#ff3a47]"
     >
       <Image
         src="/assets/background.jpg"

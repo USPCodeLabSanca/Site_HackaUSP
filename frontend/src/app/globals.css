@@ -1,11 +1,14 @@
 @import 'tailwindcss';
 
+/* Variante "light:" para escrever estilos só do modo claro */
+@custom-variant light (&:where(.light, .light *));
+
 @theme {
   /* Cores */
-  --color-primary: #D12A34;       
-  --color-primary-dark: #841118;  
+  --color-primary: #D12A34;
+  --color-primary-dark: #841118;
   --color-primary-darker: #440909;
-  
+
   --color-neutral-light: #dde1e3;
   --color-neutral-medium: #909598;
 
@@ -22,21 +25,32 @@
   --font-orbitron: 'Orbitron', sans-serif;
 }
 
+/* Tema escuro (padrão, igual ao que já era) */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: dark;
+  --background: #0a0a0a;
+  --foreground: #ededed;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Tema claro: só sobrescreve o que precisa mudar */
+html.light {
+  color-scheme: light;
+
+  --background: #fafafa;
+  --foreground: #171717;
+
+  --color-background: #fafafa;
+  --color-neutral-light: #3b4044;
+  --color-neutral-medium: #5f6569;
+  --color-highlight: #d12a34;
+
+  --color-prize-gold: #b8860b;
+  --color-prize-silver: #7d8185;
+  --color-prize-bronze: #a0602a;
 }
 
 html {
   scroll-behavior: smooth;
-  color-scheme: 'dark';
 }
 
 body {

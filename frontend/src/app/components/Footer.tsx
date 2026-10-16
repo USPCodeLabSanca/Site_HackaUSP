@@ -58,7 +58,7 @@ export default function SimpleFooter() {
                 alt="Logo NEU - ICMC USP"
                 width={40}
                 height={40}
-                className="h-5 w-auto object-contain"
+                className="h-5 w-auto object-contain light:brightness-0"
               />
 
               {/* Logo Codelab */}
@@ -67,7 +67,7 @@ export default function SimpleFooter() {
                 alt="Logo Codelab - ICMC USP"
                 width={70}
                 height={40}
-                className="h-5 w-auto object-contain"
+                className="h-5 w-auto object-contain light:brightness-0"
               />
             </div>
           </div>

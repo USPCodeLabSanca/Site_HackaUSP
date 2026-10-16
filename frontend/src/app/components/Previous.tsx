@@ -76,7 +76,7 @@ const Previous: React.FC = () => {
         </h2>
         
         <div className="relative w-full">
-          <div className="hidden md:block absolute top-[50%] left-0 right-0 h-1 bg-highlight/20 -z-0"></div>
+          <div className="hidden md:block absolute top-[50%] left-0 right-0 h-1 bg-highlight/20 z-0"></div>
 
           <Swiper
             spaceBetween={30}
@@ -96,13 +96,13 @@ const Previous: React.FC = () => {
                 slidesPerView: 3,
               },
             }}
-            className="w-full !pb-12"
+            className="w-full pb-12!"
           >
             {editions.map((edition, index) => (
               <SwiperSlide key={edition.id}>
-                <div className="flex flex-col group relative rounded-xl overflow-hidden bg-primary-darker border border-highlight/30 hover:border-highlight h-full z-10 shadow-lg">
+                <div className="flex flex-col group relative rounded-xl overflow-hidden bg-primary-darker border border-highlight/30 hover:border-highlight h-full z-10 shadow-lg light:[--color-highlight:#ff3a47]">
 
-                  <div className="relative w-full h-[220px] overflow-hidden">
+                  <div className="relative w-full h-55 overflow-hidden">
                     <Image 
                       src={edition.image} 
                       alt={`Edição ${edition.id}`} 
@@ -111,10 +111,10 @@ const Previous: React.FC = () => {
                       className="object-cover transition-transform duration-500 group-hover:scale-110"
                       priority={index === 0}
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-primary-darker via-transparent to-transparent pointer-events-none"></div>
+                    <div className="absolute inset-0 bg-linear-to-t from-primary-darker via-transparent to-transparent pointer-events-none"></div>
                   </div>
 
-                  <div className="p-6 text-left flex flex-col flex-grow bg-primary-darker">
+                  <div className="p-6 text-left flex flex-col grow bg-primary-darker">
                     <span className="text-highlight font-orbitron font-bold text-sm tracking-widest mb-2 block">
                       {edition.date}
                     </span>

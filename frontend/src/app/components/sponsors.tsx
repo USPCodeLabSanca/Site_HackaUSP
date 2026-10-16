@@ -46,7 +46,7 @@ const SponsorCard = ({ id, name, link, logoPath, width, height }: Sponsor) => {
     <BaseTag
     key={id}
     {...linkProps}
-    className="group flex h-40 items-center justify-center rounded-xl border border-white/10 bg-white/5 p-8 backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:border-red-500/60 hover:bg-white/10"
+    className="group flex h-40 items-center justify-center rounded-xl border border-white/10 bg-white/5 p-8 backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:border-red-500/60 hover:bg-white/10 light:border-black/10 light:bg-black/5 light:hover:bg-black/10"
     >
     {/* Área da Logo */}
     <div className="relative w-full max-w-full flex justify-center items-center">
@@ -56,11 +56,12 @@ const SponsorCard = ({ id, name, link, logoPath, width, height }: Sponsor) => {
         alt={name} 
         width={width || 200}
         height={height || 80}
-        className="object-contain max-h-full max-w-full p-2 brightness-0 invert"
+        // Escuro: logo branca (brightness-0 invert). Claro: logo preta (brightness-0 sem invert)
+        className="object-contain max-h-full max-w-full p-2 brightness-0 invert light:invert-0"
       />
       ) : (
       // FALLBACK - Se o logoPath não for fornecido, mostra um placeholder
-      <div className="text-white text-4xl mb-2 text-center">
+      <div className="text-white light:text-neutral-900 text-4xl mb-2 text-center">
         {name}
         <div className="text-sm">(Logo Pendente)</div>
       </div>
@@ -94,7 +95,7 @@ export default function Sponsors() {
         
       {/* Mensagem de fallback caso não haja patrocinadores */}
       {SPONSORS_DATA.length === 0 && (
-        <div className="text-center text-white/70 italic p-10 border border-dashed border-white/30 rounded-lg">
+        <div className="text-center text-white/70 light:text-black/70 italic p-10 border border-dashed border-white/30 light:border-black/30 rounded-lg">
           <p>Ainda não há patrocinadores confirmados. Volte em breve!</p>
         </div>
       )}
