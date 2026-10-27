@@ -1,18 +1,42 @@
 "use client";
 
 import dynamic from "next/dynamic";
+import { useEffect, useRef, useState } from "react";
+
+const MapPlaceholder = () => (
+  <div className="bg-gray-300 h-[500px] flex items-center justify-center">
+    <p className="text-gray-600">Carregando mapa...</p>
+  </div>
+);
 
 // Importação dinâmica para evitar problemas de SSR com Leaflet
 const MapaLeaflet = dynamic(() => import('./MapaLeaflet'), {
   ssr: false,
-  loading: () => (
-    <div className="bg-gray-300 rounded-xl h-96 flex items-center justify-center">
-      <p className="text-gray-600">Carregando mapa...</p>
-    </div>
-  )
+  loading: MapPlaceholder
 });
 
 export default function Maps() {
+  // Só monta o mapa (JS do Leaflet + tiles) quando a seção chega perto da tela
+  const mapRef = useRef<HTMLDivElement>(null);
+  const [showMap, setShowMap] = useState(false);
+
+  useEffect(() => {
+    const el = mapRef.current;
+    if (!el) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setShowMap(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "300px" }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section id="como-chegar" className="bg-background">
 
@@ -24,12 +48,12 @@ export default function Maps() {
           <p className="text-neutral-light text-sm sm:text-lg uppercase tracking-wide mb-2 font-roboto">
             LOCAL DO EVENTO
           </p>
-          <h1 className="text-4xl md:text-5xl mb-10 font-orbitron text-highlight">
+          <h2 className="text-4xl md:text-5xl mb-10 font-orbitron text-highlight">
             Como Chegar
-          </h1>
-          <h2 className="text-neutral-light text-2xl md:text-3xl font-semibold mb-2 font-roboto">
-            Capim
           </h2>
+          <h3 className="text-neutral-light text-2xl md:text-3xl font-semibold mb-2 font-roboto">
+            Capim
+          </h3>
           <p className="text-gray-300 light:text-neutral-700 text-lg max-w-md font-roboto mb-px">
             Av. Brig. Faria Lima, 1713 - Jardim Paulistano, São Paulo - SP, 01451-000
           </p>
@@ -37,8 +61,8 @@ export default function Maps() {
 
         {/* Mapa */}
         <div className="w-full max-w-4xl">
-          <div className="bg-white rounded-xl overflow-hidden shadow-2xl mb-2">
-            <MapaLeaflet />
+          <div ref={mapRef} className="bg-white rounded-xl overflow-hidden shadow-2xl mb-2">
+            {showMap ? <MapaLeaflet /> : <MapPlaceholder />}
           </div>
           <br />
           {/* Botão Google Maps */}

@@ -98,7 +98,7 @@ const Previous: React.FC = () => {
             }}
             className="w-full pb-12!"
           >
-            {editions.map((edition, index) => (
+            {editions.map((edition) => (
               <SwiperSlide key={edition.id}>
                 <div className="flex flex-col group relative rounded-xl overflow-hidden bg-primary-darker border border-highlight/30 hover:border-highlight h-full z-10 shadow-lg light:[--color-highlight:#ff3a47]">
 
@@ -107,9 +107,8 @@ const Previous: React.FC = () => {
                       src={edition.image} 
                       alt={`Edição ${edition.id}`} 
                       fill
-                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      sizes="(max-width: 768px) calc(100vw - 32px), (max-width: 1024px) 50vw, 370px"
                       className="object-cover transition-transform duration-500 group-hover:scale-110"
-                      priority={index === 0}
                     />
                     <div className="absolute inset-0 bg-linear-to-t from-primary-darker via-transparent to-transparent pointer-events-none"></div>
                   </div>

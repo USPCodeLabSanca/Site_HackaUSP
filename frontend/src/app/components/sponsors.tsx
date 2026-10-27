@@ -24,15 +24,7 @@ const SPONSORS_DATA: Sponsor[] = [
   logoPath: "/assets/patrocinadores/pilealabs-logo.png",
   link: "https://www.pilealabs.com/", 
   width: 190, 
-  height: 80, 
-  },
-  {
-  id: 3,
-  name: "Sebrae",
-  logoPath: "/assets/patrocinadores/sebrae-logo.svg",
-  link: "https://sebrae.com.br/", 
-  width: 190, 
-  height: 60, 
+  height: 80,
   }
 ];
 

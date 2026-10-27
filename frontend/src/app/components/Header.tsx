@@ -11,7 +11,11 @@ export const Header = () => {
         src="/assets/background.jpg"
         alt="background"
         fill
-        priority
+        preload
+        fetchPriority="high"
+        sizes="100vw"
+        // Imagem fica com 25% de opacidade e desfocada, então qualidade menor não é perceptível
+        quality={50}
         className="object-cover object-center -z- opacity-25 blur-[2px]"
       />
 

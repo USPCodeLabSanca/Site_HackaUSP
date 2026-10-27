@@ -13,14 +13,16 @@ export default function Home() {
   return (
     <div className="font-roboto min-h-screen">
       <Navbar />
-      <Header />
-      <About />
-      <Previous />
-      <EvaluationCriteria />
-      <PrizesSection />
-      <Subscription />
-      <Maps />
-      <Sponsors />
+      <main>
+        <Header />
+        <About />
+        <Previous />
+        <EvaluationCriteria />
+        <PrizesSection />
+        <Subscription />
+        <Maps />
+        <Sponsors />
+      </main>
       <Footer />
     </div>
   );

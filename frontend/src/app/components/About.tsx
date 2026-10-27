@@ -43,9 +43,8 @@ const About: React.FC = () => {
                     src={src} 
                     alt={`Hacka-USP momento ${index + 1}`} 
                     fill
-                    sizes="(max-width: 768px) 100vw, 50vw"
+                    sizes="(max-width: 768px) calc(100vw - 32px), 560px"
                     className="object-cover"
-                    priority={index === 0}
                   />
                 </div>
               </SwiperSlide>
