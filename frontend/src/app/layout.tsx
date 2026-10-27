@@ -6,7 +6,9 @@ import './globals.css'
 
 const orbitron = Orbitron({
   variable: '--font-orbitron',
-  subsets: ['latin']
+  subsets: ['latin'],
+  // Só usada abaixo da primeira tela; sem preload ela não disputa banda com a imagem LCP
+  preload: false
 })
 
 const roboto = Roboto({

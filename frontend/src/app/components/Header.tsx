@@ -1,23 +1,36 @@
-import Image from 'next/image'
+import { preload } from 'react-dom'
 import { Countdown } from './Countdown'
 
+// Fundo do topo é a imagem LCP. As versões AVIF ficam prontas em /public
+// (geradas a partir de background.jpg) para não depender do otimizador
+// de imagens do Next, que respondia devagar e atrasava o LCP.
+const HERO_SRCSET = [640, 750, 960, 1280]
+  .map((w) => `/assets/hero-${w}.avif ${w}w`)
+  .join(', ')
+
 export const Header = () => {
+  preload('/assets/hero-1280.avif', {
+    as: 'image',
+    type: 'image/avif',
+    imageSrcSet: HERO_SRCSET,
+    imageSizes: '100vw',
+    fetchPriority: 'high'
+  })
+
   return (
     <section
       id="inicio"
       className="bg-background relative px-4 sm:px-8 text-center font-roboto h-100 md:h-125 lg:h-150 flex flex-col justify-center items-center overflow-hidden mt-16 light:[--color-background:#0e0d0d] light:[--color-highlight:#ff3a47]"
     >
-      <Image
-        src="/assets/background.jpg"
-        alt="background"
-        fill
-        preload
-        fetchPriority="high"
-        sizes="100vw"
-        // Imagem fica com 25% de opacidade e desfocada, então qualidade menor não é perceptível
-        quality={50}
-        className="object-cover object-center -z- opacity-25 blur-[2px]"
-      />
+      <picture>
+        <source type="image/avif" srcSet={HERO_SRCSET} sizes="100vw" />
+        <img
+          src="/assets/background.jpg"
+          alt=""
+          fetchPriority="high"
+          className="absolute inset-0 h-full w-full object-cover object-center opacity-25 blur-[2px]"
+        />
+      </picture>
 
       <div className="relative z-10 text-white mt-10 lg:mt-25">
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-2 md:mb-5 lg:mb-8">
